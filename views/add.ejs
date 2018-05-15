@@ -1,0 +1,18 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/alumnos/list">Articulos</a>
+  </li>
+  <li class="breadcrumb-item active">Nuevo</li>
+</ol>
+<h1>Agregar articulo</h1>
+<form action="/alumnos/create" method="post">
+  <div class="form-group">
+    <label for="nombre">Articulo:</label>
+    <input type="text" name="title" class="form-control" placeholder="Nombre(s) del articulo">
+  </div>
+  <div class="form-group">
+    <label for="apellidos">Descripciom:</label>
+    <input type="text" name="body" class="form-control" placeholder="Descripcion del articulo">
+  </div>
+  <input type="submit" value="Agregar articulo" class="btn btn-success">
+</form>

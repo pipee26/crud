@@ -1,0 +1,26 @@
+<h1 class="text-center">Productos Registrados</h1>
+<table class="table table-striped">
+    <thead class="text-center">
+        <tr>
+            <th>Codigo</th>
+            <th>Articulo</th>
+            <th>Descripcion</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="text-center">
+        <% alumnos.forEach(function(alumno){ %>
+        <tr>
+            <td><%= alumno.id  %></td>
+            <td><%= alumno.title  %></td>
+            <td><%= alumno.body  %></td>
+            <td>
+                <a href="/alumnos/edit/<%= alumno.id  %>" class="btn btn-info">Actualizar</a>
+                <form class="d-inline" action="/alumnos/delete/<%= alumno.id  %>" method="post">
+                    <input type="submit" value="Eliminar" class="btn btn-danger">
+                </form>
+            </td>
+        </tr>
+        <% }) %>
+    </tbody>
+</table>
